@@ -1,7 +1,7 @@
-FROM node
-RUN mkdir myapp
-WORKDIR /myapp
-COPY . /myapp
+FROM node:lts-alpine3.15
+RUN mkdir app
+WORKDIR /app
+COPY . /app
 RUN npm install
 EXPOSE 8080
 CMD ["npm","start"]
